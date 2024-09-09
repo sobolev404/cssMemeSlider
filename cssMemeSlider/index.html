@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>hello world</h1>
-</body>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">cssMemeSlider</h1>
+    </header>
+    <div class="slider">
+        <div class="slider__top">
+            <button class="btn left">\-</button>
+            <div class="slider__cards">
+                <img class="slider-image block" src="img/1.png" alt="">
+                <img class="slider-image" src="img/2.png" alt="">
+                <img class="slider-image" src="img/3.png" alt="">
+                <img class="slider-image" src="img/4.png" alt="">
+                <img class="slider-image" src="img/5.png" alt="">
+            </div>
+            <button class="btn right">-/</button>
+        </div>
+        <div class="slider__bottom">
+            <p class="card-text">text</p>
+            <div class="slider__controls">
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

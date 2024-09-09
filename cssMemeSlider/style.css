@@ -1,4 +1,65 @@
-h1{
-    font-size: 30px;
-    color: red;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.header{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.slider__top{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.slider-image{
+    display: none;
+}
+
+.slider-image.block{
+    display: block;
+}
+
+.slider__bottom{
+    column-gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__controls{
+    display: flex;
+    column-gap: 10px;
+}
+
+.pagination-circle{
+    width: 15px;
+    height: 15px;
+    border: 2px solid deepskyblue;
+    border-radius: 50%;
+}
+
+.pagination-circle.active{
+    background-color: purple;
 }
