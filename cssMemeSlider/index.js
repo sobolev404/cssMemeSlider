@@ -2,31 +2,32 @@ const btnLeft = document.querySelector(".left")
 const btnRight = document.querySelector(".right")
 const slides = document.querySelectorAll(".slider-image")
 const sliderControls = document.querySelector(".slider__controls")
+const slider = document.querySelector(".slider__cards")
 console.log(slides)
 let currentSlide = 0;
+const sliderWidth = slider.clientWidth
+console.log(sliderWidth)
 
 btnLeft.addEventListener('click',showPrevSlide)
 btnRight.addEventListener('click',showNextSlide)
 
 function showPrevSlide(){
     removeActiveCircle()
-    slides[currentSlide].classList.remove("block")
     currentSlide -=1
     if(currentSlide<0){
         currentSlide=slides.length-1
     }
-    slides[currentSlide].classList.add("block")
+    slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
     addActiveCircle()
 }
 
 function showNextSlide(){
     removeActiveCircle()
-    slides[currentSlide].classList.remove("block")
     currentSlide +=1
     if(currentSlide>slides.length-1){
         currentSlide=0
     }
-    slides[currentSlide].classList.add("block")
+    slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
     addActiveCircle()
 }
 
@@ -57,9 +58,8 @@ addPaginationCircles();
 paginationCircles.forEach((item, index) => {
     item.addEventListener('click', () => {
       removeActiveCircle(); 
-      slides[currentSlide].classList.remove('block');
       currentSlide = index; 
-      slides[currentSlide].classList.add('block'); 
+      slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
       addActiveCircle();
     });
   });
