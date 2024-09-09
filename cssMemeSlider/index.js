@@ -1,11 +1,16 @@
+const meme = ['text1','text2','text3','text4','text5']
+
 const btnLeft = document.querySelector(".left")
 const btnRight = document.querySelector(".right")
 const slides = document.querySelectorAll(".slider-image")
 const sliderControls = document.querySelector(".slider__controls")
 const slider = document.querySelector(".slider__cards")
+const cardText = document.querySelector(".card-text")
+
 console.log(slides)
 let currentSlide = 0;
-const sliderWidth = slider.clientWidth
+cardText.textContent = meme[currentSlide]
+let sliderWidth = slider.clientWidth
 console.log(sliderWidth)
 
 btnLeft.addEventListener('click',showPrevSlide)
@@ -17,7 +22,7 @@ function showPrevSlide(){
     if(currentSlide<0){
         currentSlide=slides.length-1
     }
-    slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
+    showSlide()
     addActiveCircle()
 }
 
@@ -27,8 +32,13 @@ function showNextSlide(){
     if(currentSlide>slides.length-1){
         currentSlide=0
     }
-    slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
+    showSlide()
     addActiveCircle()
+}
+
+function showSlide(){
+    slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
+    cardText.textContent = meme[currentSlide]
 }
 
 const paginationCircles = []
@@ -59,7 +69,13 @@ paginationCircles.forEach((item, index) => {
     item.addEventListener('click', () => {
       removeActiveCircle(); 
       currentSlide = index; 
-      slider.style.transform = `translateX( -${currentSlide * sliderWidth}px)`
+      showSlide()
       addActiveCircle();
     });
   });
+
+
+  window.addEventListener("resize", () => {
+    sliderWidth = slider.clientWidth
+    showSlide()
+  });  

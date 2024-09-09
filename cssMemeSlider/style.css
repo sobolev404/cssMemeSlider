@@ -34,7 +34,7 @@ body{
 
 .slider__cards{
     display: flex;
-    max-width: 270px;
+    max-width: 900px;
     transition: 1s ease-in-out;
 }
 
@@ -71,4 +71,9 @@ body{
 
 .pagination-circle.active{
     background-color: purple;
+}
+
+.card-text{
+    color: white;
+    font-size: 20px;
 }
