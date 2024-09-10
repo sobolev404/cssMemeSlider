@@ -1,4 +1,4 @@
-const meme = ['meme1','meme2','meme3','meme4','meme5']
+const meme = ['this is fine:)','cat eats broccoli','becoming a meme is not easy','matches are not a toy for children','ran out of arguments ']
 
 const btnLeft = document.querySelector(".left")
 const btnRight = document.querySelector(".right")
