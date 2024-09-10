@@ -4,9 +4,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body{
     background-color: #154522;
-    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
 }
 
 .header{
@@ -15,11 +22,11 @@ body{
 }
 
 .slider{
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 30px;
 }
 
 .slider__top{
@@ -42,6 +49,7 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    display: none;
 }
 
 .slider-image{
@@ -51,6 +59,7 @@ body{
 
 
 .slider__bottom{
+    margin-top: 10px;
     column-gap: 50px;
     display: flex;
     justify-content: space-between;
@@ -77,3 +86,52 @@ body{
     color: white;
     font-size: 20px;
 }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: #fff;
+  justify-self: flex-end;;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+.githubLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  display: block;
+
+}
+
+.contacts ul {
+    list-style: none;
+}
+
+.contacts ul li{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__bottom{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+  }

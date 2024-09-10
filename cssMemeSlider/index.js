@@ -1,4 +1,4 @@
-const meme = ['text1','text2','text3','text4','text5']
+const meme = ['meme1','meme2','meme3','meme4','meme5']
 
 const btnLeft = document.querySelector(".left")
 const btnRight = document.querySelector(".right")
@@ -6,11 +6,13 @@ const slides = document.querySelectorAll(".slider-image")
 const sliderControls = document.querySelector(".slider__controls")
 const slider = document.querySelector(".slider__cards")
 const cardText = document.querySelector(".card-text")
+const sliderBottom = document.querySelector(".slider__bottom")
 
 console.log(slides)
 let currentSlide = 0;
 cardText.textContent = meme[currentSlide]
 let sliderWidth = slider.clientWidth
+sliderBottom.style.width = `${sliderWidth}px`
 console.log(sliderWidth)
 
 btnLeft.addEventListener('click',showPrevSlide)
@@ -77,5 +79,6 @@ paginationCircles.forEach((item, index) => {
 
   window.addEventListener("resize", () => {
     sliderWidth = slider.clientWidth
+    sliderBottom.style.width = `${sliderWidth}px`
     showSlide()
   });  
