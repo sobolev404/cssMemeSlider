@@ -21,48 +21,29 @@
     <header class="header">
       <h1 class="header__title">cssMemeSlider</h1>
     </header>
-    <div class="slider">
-      <div class="slider__top">
-        <button class="btn left">\-</button>
-        <div class="frame">
-          <div class="slider__cards">
-            <div class="slider-image">
-              <img
-                src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-02.hzeuexykyf4b..jpg?preset=image_570w_2x"
-                alt=""
-              />
-            </div>
-            <div class="slider-image">
-              <img
-                src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-06.ex4afatqg2lk..jpg?preset=image_570w_2x"
-                alt=""
-              />
-            </div>
-            <div class="slider-image">
-              <img
-                src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-13.io6eeu7kinat..jpg?preset=image_570w_2x"
-                alt=""
-              />
-            </div>
-            <div class="slider-image">
-              <img
-                src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-16.afbsmuzk5uwf..jpg?preset=image_570w_2x"
-                alt=""
-              />
-            </div>
-            <div class="slider-image">
-              <img
-                src="https://admin.europaplus.ru/storage/news/370/037025/mem-mister4.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+    <div class="slider__wrapper">
+      <div class="frame">
+        <div class="slider__cards">
+          <input type="radio" name="r" id="r1" checked />
+          <input type="radio" name="r" id="r2" />
+          <input type="radio" name="r" id="r3" />
+          <input type="radio" name="r" id="r4" />
+          <input type="radio" name="r" id="r5" />
+
+          <div class="slider-image s1"><img src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-02.hzeuexykyf4b..jpg?preset=image_570w_2x" alt="" />
+          <p>s1</p></div>
+          <div class="slider-image"><img src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-06.ex4afatqg2lk..jpg?preset=image_570w_2x" alt="" /></div>
+          <div class="slider-image"><img src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-13.io6eeu7kinat..jpg?preset=image_570w_2x" alt="" /></div>
+          <div class="slider-image"><img src="https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-16.afbsmuzk5uwf..jpg?preset=image_570w_2x" alt="" /></div>
+          <div class="slider-image"><img src="https://admin.europaplus.ru/storage/news/370/037025/mem-mister4.jpg" alt="" /></div>
         </div>
-        <button class="btn right">-/</button>
       </div>
-      <div class="slider__bottom">
-        <p class="card-text"></p>
-        <div class="slider__controls"></div>
+      <div class="navigation">
+        <label for="r1" class="pagination-circle l1"></label>
+        <label for="r2" class="pagination-circle l2"></label>
+        <label for="r3" class="pagination-circle l3"></label>
+        <label for="r4" class="pagination-circle l4"></label>
+        <label for="r5" class="pagination-circle l5"></label>
       </div>
     </div>
     <footer>
