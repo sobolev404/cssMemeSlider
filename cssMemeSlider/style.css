@@ -38,9 +38,7 @@ body {
 }
 
 
-.frame {
-  /* overflow: hidden; */
-}
+
 
 .slider__cards {
   display: flex;
