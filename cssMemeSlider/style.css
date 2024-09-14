@@ -25,6 +25,8 @@ body {
 
 
 .slider__wrapper{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,28 +34,23 @@ body {
   padding: 0 50px;
 }
 
-.frame {
-  overflow: hidden;
-}
 
 .slider__cards {
-  display: flex;
-  align-items: stretch;
-  max-width: 900px;
-  transition: 1s ease-in-out;
-}
-.slider-image {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  transition: all .6s ease;  
-
-}
-
-.slider-image img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  transition: 1s ease-in-out;
+}
+.s1 {
+  width: 100%;
+  height: 100%;
+  transition: all .6s ease;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
@@ -98,19 +95,19 @@ input[name="r"]{
 
 
 #r1:checked ~ .s1{
-  margin-left: 0;
+  background-image: url("https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-02.hzeuexykyf4b..jpg?preset=image_570w_2x");
 }
 #r2:checked ~ .s1{
-  margin-left: -100%;
+  background-image: url("https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-06.ex4afatqg2lk..jpg?preset=image_570w_2x");
 }
 #r3:checked ~ .s1{
-  margin-left: -200%;
+  background-image: url("https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-13.io6eeu7kinat..jpg?preset=image_570w_2x");
 }
 #r4:checked ~ .s1{
-  margin-left: -300%;
+  background-image: url("https://opis-cdn.tinkoffjournal.ru/mercury/old-memes-to-remember-16.afbsmuzk5uwf..jpg?preset=image_570w_2x");
 }
 #r5:checked ~ .s1{
-  margin-left: -400%;
+  background-image: url("https://admin.europaplus.ru/storage/news/370/037025/mem-mister4.jpg");
 }
 
 input#r1:checked ~ .navigation .l1,
