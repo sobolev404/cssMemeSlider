@@ -32,14 +32,14 @@ body {
   row-gap: 30px;
 }
 
-.slider__top {
+.navigation{
   display: flex;
-  align-items: center;
-  column-gap: 30px;
+  column-gap: 10px;
 }
 
+
 .frame {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .slider__cards {
@@ -47,19 +47,23 @@ body {
   align-items: stretch;
   max-width: 900px;
   transition: 1s ease-in-out;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
-.btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: none;
+input[name="r"]{
+  position: absolute;
+  visibility:hidden;
 }
 
 .slider-image {
   width: 100%;
   height: auto;
   flex-shrink: 0;
+  display: none;
+  flex-direction: column;
+  row-gap: 30px;
+  transition: all .6s ease;  
 }
 
 .slider-image img {
@@ -68,18 +72,24 @@ body {
   object-fit: fill;
 }
 
-.slider__bottom {
-  margin-top: 10px;
-  column-gap: 50px;
+.slider__bottom{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.slider__controls {
+.slider__text{
   display: flex;
-  column-gap: 10px;
+  flex-direction: column;
 }
+
+.slider__text p{
+  display: none;
+  font-size: 30px;
+  color: white;
+
+}
+
 
 .pagination-circle {
   position: relative;
@@ -155,6 +165,48 @@ footer ul li {
   align-items: center;
 }
 
+input#r1:checked ~ .slider__bottom .navigation .l1,
+input#r2:checked ~ .slider__bottom .navigation .l2,
+input#r3:checked ~ .slider__bottom .navigation .l3,
+input#r4:checked ~ .slider__bottom .navigation .l4,
+input#r5:checked ~ .slider__bottom .navigation .l5 {
+  background-color: purple;
+}
+
+#r1:checked ~ .s1{
+  display: flex;
+}
+#r2:checked ~ .s2{
+  display: flex;
+}
+#r3:checked ~ .s3{
+  display: flex;
+}
+#r4:checked ~ .s4{
+  display: flex;
+}
+#r5:checked ~ .s5{
+  display: flex;
+}
+
+
+#r1:checked ~ .slider__bottom .slider__text .p1{
+  display: flex;
+  align-self: flex-start;
+}
+#r2:checked ~ .slider__bottom .slider__text .p2{
+  display: flex;
+}
+#r3:checked ~ .slider__bottom .slider__text .p3{
+  display: flex;
+}
+#r4:checked ~ .slider__bottom .slider__text .p4{
+  display: flex;
+}
+#r5:checked ~ .slider__bottom .slider__text .p5{
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
   .slider__bottom {
     flex-direction: column;
@@ -162,8 +214,5 @@ footer ul li {
     flex-direction: column-reverse;
   }
 
-  .card-text{
-    align-self: flex-start;
-    font-size: 20px;
-  }
+  
 }
