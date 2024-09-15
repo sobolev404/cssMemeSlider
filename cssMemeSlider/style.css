@@ -63,7 +63,7 @@ input[name="r"]{
   flex-shrink: 0;
   flex-direction: column;
   row-gap: 30px;
-  transition: all .6s ease;  
+  transition: all 1s ease;  
   opacity: 0;
 }
 
@@ -81,13 +81,17 @@ input[name="r"]{
 
 .slider__text{
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slider__text p{
-  display: none;
   font-size: 30px;
   color: white;
+  width: 100%;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: all 1s ease;  
 
 }
 
@@ -197,20 +201,24 @@ input#r5:checked ~ .slider__bottom .navigation .l5 {
 
 
 #r1:checked ~ .slider__bottom .slider__text .p1{
-  display: flex;
-  align-self: flex-start;
+  transform: translate(0%);
+  opacity: 1;
 }
 #r2:checked ~ .slider__bottom .slider__text .p2{
-  display: flex;
+  transform:translateX(-100%);
+  opacity: 1;
 }
 #r3:checked ~ .slider__bottom .slider__text .p3{
-  display: flex;
+  transform:translateX(-200%);
+  opacity: 1;
 }
 #r4:checked ~ .slider__bottom .slider__text .p4{
-  display: flex;
+  transform:translateX(-300%);
+  opacity: 1;
 }
 #r5:checked ~ .slider__bottom .slider__text .p5{
-  display: flex;
+  transform:translateX(-400%);
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -219,6 +227,7 @@ input#r5:checked ~ .slider__bottom .navigation .l5 {
     row-gap: 20px;
     flex-direction: column-reverse;
   }
-
-  
+  .slider__text p{
+    font-size: 15px;
+  }  
 }
